@@ -6,15 +6,15 @@ on:
       - master
 
 jobs:
-  sample_deployment_pipeline:
-    runs_on: ubuntu-20.04
+  simple_deployment_pipeline:
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
-        with:   
+        with:
           node-version: '16'
-      - name: npm install
-        run: npm install
+      - name: npm install 
+        run: npm install  
       - name: lint
         run: npm run eslint
         
